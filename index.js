@@ -21,4 +21,9 @@ function repeatedString(s, n) {
   var repeat = Math.floor(n/stringSize);
   var left = n-(repeat*stringSize);
   return((repeat*a) + s.split('').filter((a,i) => a == 'a' && i < left).length);
+  // let root = Math.floor(Number(n)/s.length);
+  // let aroot = (s.match(/a/g) || []).length;
+  // let rmod = ((Number(n)/s.length) % s.length);
+  // let amod = (s.substring(0,(rmod*s.length)).match(/a/g) || []).length;
+  // return((aroot*root)+amod);
 }
