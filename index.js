@@ -13,3 +13,12 @@ function jumpingOnClouds(c) {
     // console.log(path)
     return (path.length)
 }
+
+function repeatedString(s, n) {
+  // Write your code here
+  var stringSize = s.length;
+  var a = s.split('').filter((a) => a == 'a').length;
+  var repeat = Math.floor(n/stringSize);
+  var left = n-(repeat*stringSize);
+  return((repeat*a) + s.split('').filter((a,i) => a == 'a' && i < left).length);
+}
